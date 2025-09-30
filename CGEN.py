@@ -65,7 +65,14 @@ def generate_code_thread(prompt_text):
     try:
         # This is the "system prompt" - our strict instruction to the AI.
         # It forces the model to ONLY output C code.
-        system_message = "You are a C code generation expert. Your sole purpose is to write a complete, correct, and clean C program based on the user's request. You MUST NOT provide any explanation, commentary, or text outside of the final C code block. Your entire response must be valid C code."
+        system_message =system_message = (
+    "You are a C code generation expert. Your sole purpose is to write a **complete, correct, and clean C program** "
+    "based on the user's request. "
+    "The C code MUST be self-contained, include all necessary headers (like <stdio.h>), "
+    "and **ALWAYS include a functional 'int main()'** that demonstrates the requested feature. "
+    "**You MUST NOT** provide any explanation, commentary, markdown wrappers (like ```c or ```), "
+    "or any text outside of the final C code. Your entire response must be valid C code."
+)
         
         # This combines the system instruction with the user's request.
         full_prompt = f"<s>[INST] {system_message}\n\nUser request: {prompt_text} [/INST]\n"
