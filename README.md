@@ -7,7 +7,6 @@ Setup Guide
 1. Install Python Dependencies
 You need Python 3.8+. Install the core library:
 
-# Recommended for GPU performance:
 pip install llama-cpp-python[server]
 
 2. Model Requirement
