@@ -3,7 +3,7 @@ An application to generate C code using a local, offline Code Llama LLM.
 
 The application generates clean, complete, and runnable C programs based on your requests. All code generation happens fully offline on your machine.
 
-🚀 Setup Guide
+Setup Guide
 1. Install Python Dependencies
 You need Python 3.8+. Install the core library:
 
@@ -18,9 +18,9 @@ Rename it to: codellama-7b-instruct.Q4_K_M.gguf
 Place it in the same directory as your Python script.
 
 3. Run the App
-python c_code_generator.py
+python CGEN.py
 
-✨ How to Use
+How to Use
 Wait for the Status Bar (bottom) to turn green ("Model loaded successfully. Ready.").
 
 Enter your C code request in the top box.
